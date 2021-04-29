@@ -1,10 +1,22 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
+// const teamArray = []
+
 
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
+// // const mainMenuPrompt = () => {
+// //     return inquirer.prompt([
+// //     {
+// //         type: 'list',
+// //         name: '',
+// //         message: 'Pick your employee',
+// //         choices: ['Engineer', 'Inter', 'Manager']
+// //     }
+// //     ])
+// }
 const promptUser = () => {
   return inquirer.prompt([
     {
@@ -14,18 +26,13 @@ const promptUser = () => {
     },
     {
       type: 'input',
-      name: 'location',
-      message: 'Where are you from?',
+      name: 'email',
+      message: 'What is your email?',
     },
     {
       type: 'input',
-      name: 'hobby',
-      message: 'What is your favorite hobby?',
-    },
-    {
-      type: 'input',
-      name: 'food',
-      message: 'What is your favorite food?',
+      name: 'id',
+      message: 'What is your id?',
     },
     {
       type: 'input',
