@@ -1,22 +1,22 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-// const teamArray = []
+const teamArray = []
 
 
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// // const mainMenuPrompt = () => {
-// //     return inquirer.prompt([
-// //     {
-// //         type: 'list',
-// //         name: '',
-// //         message: 'Pick your employee',
-// //         choices: ['Engineer', 'Inter', 'Manager']
-// //     }
-// //     ])
-// }
+const mainMenuPrompt = () => {
+    return inquirer.prompt([
+    {
+        type: 'list',
+        name: '',
+        message: 'Pick your employee',
+        choices: ['Engineer', 'Inter', 'Manager']
+    }
+    ])
+}
 const promptUser = () => {
   return inquirer.prompt([
     {
@@ -59,59 +59,15 @@ const generateHTML = (answers) =>
 <body>
   <div class="container">
     <div class="card">
-      <div class="card-body">
-        <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-        <p class="lead">I am from ${answers.location}.</p>
-        <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-        <ul class="list-group">
-          <li class="list-group-item">My GitHub username is ${answers.github}</li>
-          <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-        </ul>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-        <p class="lead">I am from ${answers.location}.</p>
-        <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-        <ul class="list-group">
-          <li class="list-group-item">My GitHub username is ${answers.github}</li>
-          <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-        </ul>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-        <p class="lead">I am from ${answers.location}.</p>
-        <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-        <ul class="list-group">
-          <li class="list-group-item">My GitHub username is ${answers.github}</li>
-          <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-        </ul>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-        <p class="lead">I am from ${answers.location}.</p>
-        <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-        <ul class="list-group">
-          <li class="list-group-item">My GitHub username is ${answers.github}</li>
-          <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-        </ul>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-        <p class="lead">I am from ${answers.location}.</p>
-        <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-        <ul class="list-group">
-          <li class="list-group-item">My GitHub username is ${answers.github}</li>
-          <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-        </ul>
-      </div>
+        <div class="card-body">
+            <h1 class="display-4">Hi! My name is ${answers.name}</h1>
+            <p class="lead">I am from ${answers.location}.</p>
+            <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+            <ul class="list-group">
+                <li class="list-group-item">My GitHub username is ${answers.github}</li>
+                <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
+            </ul>
+        </div>
     </div>
   </div>  
 </body>
