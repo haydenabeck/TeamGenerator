@@ -1,4 +1,6 @@
-# TeamGenerator# 10 Object-Oriented Programming: Team Profile Generator
+# TeamGenerator 
+
+## Object-Oriented Programming: Team Profile Generator
 
 
 ## Live Link
